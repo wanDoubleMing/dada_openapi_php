@@ -16,17 +16,17 @@ $config = new Config(0, false);
 
 //*********************2.实例化一个model*************************
 $orderModel = new OrderModel();
-$orderModel->setShopNo('11047059');
-$orderModel->setOriginId('2018091100000002');
-$orderModel->setCityCode('021');
+$orderModel->setShopNo('xxxxxxxxxxxxorigin_shop_no');	// 第三方门店编号
+$orderModel->setOriginId('xxxxxxxxxxxxxxxxxx');			// 第三方订单号
+$orderModel->setCityCode('xxxxx');						// 城市code(可以参照城市code接口)
 $orderModel->setCargoPrice(10);
 $orderModel->setIsPrepay(0);
-$orderModel->setReceiverName('测试达达');
-$orderModel->setReceiverAddress('上海市崇明岛');
-$orderModel->setReceiverLat(31.63);
-$orderModel->setReceiverLng(121.41);
-$orderModel->setReceiverPhone('18588888888');
-$orderModel->setCallback('');
+$orderModel->setReceiverName('xxxxxxxxxxxxxxxxxx');
+$orderModel->setReceiverAddress('xxxxxxxxxxxxxxx');
+$orderModel->setReceiverLat(0);
+$orderModel->setReceiverLng(0);
+$orderModel->setReceiverPhone('xxxxxxxxxxxxxxxxxx');
+$orderModel->setCallback('');							// 回调url, 每次订单状态变更会通知该url(参照回调接口)
 
 //*********************3.实例化一个api*************************
 $addOrderApi = new AddOrderApi(json_encode($orderModel));

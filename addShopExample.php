@@ -14,16 +14,16 @@ $config = new Config(0, false);
 
 //*********************2.实例化一个model*************************
 $shopModel = new ShopAddModel();
-$shopModel->setStationName('20180911测试');
+$shopModel->setStationName('xxxxxxxxxxxxxx');		// 门店名称
 $shopModel->setBusiness(1);
-$shopModel->setCityName('上海');
-$shopModel->setAreaName('浦东新区');
-$shopModel->setStationAddress("隆宇大厦");
-$shopModel->setLat(31.228623);
-$shopModel->setLng(121.587172);
-$shopModel->setContactName('达达02');
-$shopModel->setPhone('13809126789');
-$shopModel->setOriginShopId('phpSdk001');
+$shopModel->setCityName('xxxxxxxxxx');				// 根据实际情况填写
+$shopModel->setAreaName('xxxxxxxxxx');
+$shopModel->setStationAddress("xxxxxxxxxxxx");
+$shopModel->setLat(0);
+$shopModel->setLng(0);
+$shopModel->setContactName('xxxxxxxxxxxxxx');
+$shopModel->setPhone('xxxxxxxxxxxx');
+$shopModel->setOriginShopId('xxxxxxxxxx');			// 第三方门店编号，发单时候使用
 // 批量接口
 $shopList = array($shopModel);
 //*********************3.实例化一个api*************************
